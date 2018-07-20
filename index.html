@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.8.8/jquery.fullPage.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script>
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                navigation: true,
+                navigationPosition: 'right',
+                navigationTooltips: ['Home ', 'Reasons to Donate ', 'Concerning Drop ', 'Our Goal ', 'Where to Donate ', 'Today\'s Target '],
+                controlArrows: false,
+                onLeave: function(index, nextIndex, direction) {
+                    /*$('#bloodDrops').removeClass('bloodDrops');
+                    setTimeout(
+                        function() {
+                            $('#bloodDrops').addClass('bloodDrops')
+                        }, 1);
+                    $('#bloodDropsStart').removeClass('bloodDropsStart');
+                    setTimeout(
+                        function() {
+                            $('#bloodDropsStart').addClass('bloodDropsStart')
+                        }, 1);*/
+                    if (nextIndex == 4) {
+                        interactiveChart1.render(1000, false);
+                    }
+                }
+
+            });
+        });
+        $(document).on('click', '#btn1', function() {
+            $.fn.fullpage.moveSectionDown();
+        });
+        $(document).on('click', '#btn2', function() {
+            $.fn.fullpage.moveTo(5);
+        });
+    </script>
+    <style>
+        @font-face {
+            font-family: 'keep_calm_medregular';
+            src: url('fonts/keepcalm-medium-webfont.woff2') format('woff2'), url('fonts/keepcalm-medium-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'keep_calm_medregular', sans-serif;
+            background-color: #333;
+            color: white;
+        }
+
+        h1 {
+            font-size: 72px;
+            line-height: .9;
+            position: relative;
+            z-index: 200;
+        }
+
+        h2 {
+            font-size: 48px;
+            position: relative;
+            z-index: 200;
+        }
+
+        h3 {
+            font-size: 36px;
+            position: relative;
+            z-index: 200;
+        }
+
+        h4 {
+            font-size: 24px;
+            color: #bbb;
+            position: relative;
+            z-index: 200;
+        }
+
+        h5 {
+            font-size: 18px;
+            color: #bbb;
+            position: relative;
+            z-index: 200;
+        }
+
+        .bloodDropsStart {
+            width: 80px;
+            height: 150px;
+            display: block;
+            background-image: url("sprites/bloodDropsLong.png");
+            animation: bloodDropsStartPlay 1.5s steps(16) infinite;
+            animation-fill-mode: forwards;
+            position: relative;
+            z-index: 100;
+        }
+
+        @keyframes bloodDropsStartPlay {
+            100% {
+                background-position: 1280px;
+            }
+        }
+
+        .bloodDrops {
+            width: 70px;
+            height: 90px;
+            display: block;
+            background-color: red;
+            border-radius: 50%;
+            animation: bloodDropsPlay 1.5s infinite;
+            animation-timing-function: linear;
+            animation-fill-mode: forwards;
+            position: relative;
+            z-index: 100;
+        }
+
+        @keyframes bloodDropsPlay {
+            0% {
+                opacity: 0;
+                transform: translateY(-80px);
+            }
+            43% {
+                opacity: 0;
+                transform: translateY(-80px);
+            }
+            48% {
+                opacity: 100;
+            }
+            50% {
+                opacity: 100;
+            }
+            99% {
+                width: 80px;
+                transform: translateY(455vh);
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .btn-grey {
+            background: #bbb;
+            color: #333;
+            border: 0px;
+            position: relative;
+            z-index: 200;
+        }
+
+        .btn-grey:hover {
+            background: red;
+        }
+
+        .btn-red {
+            background: red;
+            color: white;
+            border: 0px;
+            position: relative;
+            z-index: 200;
+            animation: register 1.5s infinite;
+        }
+
+        .btn-red:hover {
+            background: #b00;
+            color: #bbb;
+        }
+
+        @keyframes register {
+          0%{
+            transform: scale(1);
+          }
+          10%{
+            transform: scale(1.1);
+          }
+        }
+
+        #fp-nav ul li a span {
+            background-color: #bbb;
+        }
+
+        #fp-nav ul li a.active span,
+        #fp-nav ul li:hover a.active span {
+            height: 16px;
+            width: 16px;
+            margin: -8px 0 0 -8px;
+            background-color: red;
+        }
+
+        #fp-nav ul li .fp-tooltip {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 18px;
+            top: -6px;
+        }
+
+        #sec1 {
+            background-color: #333;
+            background-image: url("images/backgroundblank.png");
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #sec2 {
+            background-color: #333;
+            background-image: url("http://il9.picdn.net/shutterstock/videos/13972121/thumb/1.jpg");
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #sec3 {
+            background-color: #333;
+            background-image: url("https://static.vecteezy.com/system/resources/previews/000/106/988/original/3d-cubes-vector-pattern.jpg");
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #sec4 {
+            background-color: #333;
+            background-image: url("http://d3ui957tjb5bqd.cloudfront.net/images/screenshots/products/29/294/294444/1-f.jpg");
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #sec5 {
+            background-color: #333;
+            background-image: url("http://il2.picdn.net/shutterstock/videos/20523484/thumb/1.jpg");
+            background-blend-mode: multiply;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #sec6 {
+            background-color: #333;
+            background-image: url("http://creativeloads.com/foto/square-pattern-210.jpg");
+            background-blend-mode: multiply;
+            background-size: cover;
+            background-position: center;
+        }
+
+        #interactiveChart1,
+        #interactiveChart2 {
+            width: 100%;
+            height: auto;
+            margin: auto;
+            position: relative;
+            z-index: 300;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="fullpage">
+        <div id="sec1" class="section">
+            <div id="bloodDropsStart" class="center-block bloodDropsStart">
+            </div>
+            <div id="bloodDrops" class="center-block bloodDrops">
+            </div>
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-md-12">
+                        <h1>Every<br>Drop<br>Matters<br></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" style="padding: 100px 0;">
+                        <a id="btn1" class="btn btn-grey btn-lg" role="button">Learn More</a><br><br>
+                        <a id="btn2" class="btn btn-grey btn-lg" role="button">Donate Now</a><br><br><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sec2" class="section">
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-md-12" style="padding-bottom: 100px;">
+                        <h2>Why?</h2>
+                    </div>
+                </div>
+                <div class="row" style="padding: 0 15vw;">
+                    <div class="col-md-6" style="padding-top: 21px;">
+                        <img src="charts/chart1.png"><br><br>
+                        <h4>One in four people will need a<br>blood transfusion in their life</h4>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="charts/chart2.png"><br><br>
+                        <h4>Only 2.3% of the population<br>are blood donors in 2015</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sec3" class="section">
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-md-12" style="padding-bottom: 100px;">
+                        <h2>I'm unnecessary, right?</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h5>In 2015,<br></h5>
+                        <h4>Total Number of Blood Donors: 169928<br></h4>
+                        <h1><span style="color:red">▲</span>2.1%</h1>
+                        <h4><br>First-time Donors: 36993<br></h4>
+                        <h1><span style="color:red">▼</span>4.9%</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sec4" class="section">
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-md-12" style="padding-bottom: 100px;">
+                        <h2>What do you need?</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 center-block" style="padding-left: 15vw;">
+                        <canvas id="interactiveChart1" height="400" width="400"></canvas>
+                        <script>
+                            var ctx = document.getElementById("interactiveChart1").getContext('2d');
+                            var interactiveChart1 = new Chart(ctx, {
+                                type: 'doughnut',
+                                data: {
+                                    labels: ["Type O", "Type A", "Type B", "Type AB"],
+                                    datasets: [{
+                                        backgroundColor: [
+                                            "#bbb",
+                                            "#999",
+                                            "#777",
+                                            "#555"
+                                        ],
+                                        hoverBackgroundColor: [
+                                            "#f00",
+                                            "#d00",
+                                            "#b00",
+                                            "#900"
+                                        ],
+                                        data: [42.27, 25.91, 25.88, 6.01],
+                                        borderWidth: 0
+                                    }]
+                                },
+                                options: {
+                                    maintainAspectRatio: false,
+                                    legend: {
+                                        display: false
+                                    },
+                                    cutoutPercentage: 80,
+                                    tooltips: {
+                                        backgroundColor: 'rgba(0,0,0,0.5)',
+                                        bodyFontFamily: "'keep_calm_medregular', sans-serif",
+                                        bodyFontSize: 24,
+                                        bodyFontColor: "#fff",
+                                        yPadding: 20,
+                                        xPadding: 10
+                                    }
+                                }
+                            });
+                        </script>
+                        <h4 style="margin-top: -250px; margin-bottom: 250px;">Estimated<br>Blood<br>Demand<br>in 2016 (%)</h4>
+                    </div>
+                    <div class="col-md-6 text-left" style="padding-left:7.5vw;">
+                        <h4>Blood Collection Per Year<br></h4>
+                        <h1><i class="fa fa-tint" aria-hidden="true" style="color: red;"></i> 266000</h1>
+                        <h4><br>Recruit Per Day<br></h4>
+                        <h1><i class="fa fa-user" aria-hidden="true" style="color: red;"></i> 1100</h1>
+                        <h4><br>Recruit Per Hour<br></h4>
+                        <h1><i class="fa fa-user" aria-hidden="true" style="color: red;"></i> 46</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sec5" class="section">
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-md-12" style="padding-bottom: 50px;">
+                        <h2>Where should I go?</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <img src="charts/chart3.png"><br><br><br>
+                        <button type="button" class="btn btn-red btn-lg">Register for Visit</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="sec6" class="section">
+            <div class="container-fluid text-center">
+                <div class="row">
+                    <div class="col-md-12" style="padding: 100px 0">
+                        <h2>Today's Target</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" style="padding: 0 10vw;">
+                        <canvas id="interactiveChart2" height="520" width="400"></canvas>
+                        <script>
+                            var ctx = document.getElementById("interactiveChart2").getContext('2d');
+                            var interactiveChart2 = new Chart(ctx, {
+                                type: 'bar',
+                                data: {
+                                    labels: ["Type O", "Type A", "Type B", "Type AB"],
+                                    datasets: [{
+                                        backgroundColor: "#f00",
+                                        data: [95, 50, 50, 25],
+                                    }, {
+                                        backgroundColor: "#bbb",
+                                        data: [5, 50, 50, 75],
+                                    }]
+                                },
+                                options: {
+                                    maintainAspectRatio: false,
+                                    legend: {
+                                        display: false
+                                    },
+                                    cutoutPercentage: 80,
+                                    tooltips: {
+                                        enabled: false,
+                                    },
+                                    scales: {
+                                        xAxes: [{
+                                            display: true,
+                                            stacked: true,
+                                            position: "top",
+                                            ticks: {
+                                                fontFamily: "'keep_calm_medregular', sans-serif",
+                                                fontColor: "#fff",
+                                                fontSize: 36
+                                            },
+                                            gridLines: {
+                                                drawOnChartArea: false,
+                                                drawTicks: false
+                                            }
+                                        }],
+                                        yAxes: [{
+                                            display: false,
+                                            stacked: true
+                                        }]
+                                    }
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>
