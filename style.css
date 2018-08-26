@@ -44,12 +44,12 @@ a:link, a:hover, a:active, a:visited {
 }
 
 .unfold {
-  padding-top: 5vh;
+  margin-top: 5vh;
 }
 
 .background-gradient {
   width: 100vw;
-  height: 120vh;
+  height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -477,9 +477,6 @@ a:link, a:hover, a:active, a:visited {
 @media all and (max-width: 600px) {
   .topnav {
     padding: 0 10vw;
-  }
-  .landing {
-    padding: 30vh 10vw 5vh 10vw;
   }
   .name {
     font-size: 3em;
