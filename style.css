@@ -481,6 +481,9 @@ a:link, a:hover, a:active, a:visited {
   .unfold {
     margin-top: 0;
   }
+  .landing {
+    padding: 35vh 10vw 5vh 10vw;
+  }
   .name {
     font-size: 3em;
   }
