@@ -1,4 +1,4 @@
-20 //topnav scrolling
+//topnav scrolling
 
 var viewportHeight = $(window).height();
 
