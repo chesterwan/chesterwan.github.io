@@ -478,6 +478,9 @@ a:link, a:hover, a:active, a:visited {
   .topnav {
     padding: 0 10vw;
   }
+  .unfold {
+    margin-top: 0;
+  }
   .name {
     font-size: 3em;
   }
@@ -491,6 +494,9 @@ a:link, a:hover, a:active, a:visited {
   [class*="project-"] {
     margin: 5vw 0 10vw 0;
     width: 100%;
+  }
+  .hide-bottom {
+    margin-top: 100vh;
   }
   .message {
     font-size: 1.5em;
