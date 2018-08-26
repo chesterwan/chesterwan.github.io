@@ -388,7 +388,7 @@ a:link, a:hover, a:active, a:visited {
 }
 
 .hide-bottom {
-  transform: translateY(100vh);
+  margin-top: 100vh;
 }
 
 /*
