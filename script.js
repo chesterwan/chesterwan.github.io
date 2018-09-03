@@ -76,6 +76,22 @@ $(window).scroll(function() {
   }
 });
 
+//project-1 details
+
+var p1DetailsActive = false;
+
+$("#p1detailstoggle").click(function() {
+  if ($("#p1details").height() > 0) {
+    $("#p1details").css("max-height", 0);
+    $("#p1detailstoggle > i").removeClass("fa-angle-up");
+    $("#p1detailstoggle > i").addClass("fa-angle-down");
+  } else {
+    $("#p1details").css("max-height", $("#p1details").prop("scrollHeight") + "px");
+    $("#p1detailstoggle > i").removeClass("fa-angle-down");
+    $("#p1detailstoggle > i").addClass("fa-angle-up");
+  }
+});
+
 //project-2 sliding
 
 $(window).scroll(function() {
@@ -98,6 +114,22 @@ $("#p2lightboxclose").click(function() {
   //event.preventDefault();
   $("#p2lightbox").removeClass("reveal-top");
   $("#ytplayer")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+});
+
+//project-2 details
+
+var p2DetailsActive = false;
+
+$("#p2detailstoggle").click(function() {
+  if ($("#p2details").height() > 0) {
+    $("#p2details").css("max-height", 0);
+    $("#p2detailstoggle > i").removeClass("fa-angle-up");
+    $("#p2detailstoggle > i").addClass("fa-angle-down");
+  } else {
+    $("#p2details").css("max-height", $("#p1details").prop("scrollHeight") + "px");
+    $("#p2detailstoggle > i").removeClass("fa-angle-down");
+    $("#p2detailstoggle > i").addClass("fa-angle-up");
+  }
 });
 
 //project-3 sliding

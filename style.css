@@ -61,7 +61,7 @@ a:link, a:hover, a:active, a:visited {
   padding: 40vh 10vw 5vh 10vw;
   display: block;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 .name {
@@ -211,10 +211,16 @@ a:link, a:hover, a:active, a:visited {
   float: left;
 }
 
-.image {
-  /*transform: translateY(-8.5vw);*/
+.intro {
+  display: block;
+  position: relative;
+  float: left;
+}
+
+.intro .image {
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   position: absolute;
   top: 0;
   height: 100%;
@@ -278,55 +284,176 @@ a:link, a:hover, a:active, a:visited {
   font-size: 1.5em;
   text-align: left;
   font-weight: 700;
-  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.action a {
+  cursor: pointer;
 }
 
 .action i {
   padding-right: 12px;
 }
 
-.project-1, .project-3, .project-5 {
-  /*background: linear-gradient(60deg, #607d8b, #fff 60%);*/
+.details-toggle {
+  color: #9e9e9e;
+  font-size: 0.75em;
+  text-align: right;
+  font-weight: 700;
 }
 
-.project-1 .image, .project-3 .image, .project-5 .image {
+.details-toggle a {
+  cursor: pointer;
+}
+
+.details-toggle i {
+  padding-right: 6px;
+}
+
+.details {
+  background-color: #eceff1;
+  display: block;
+  width: 100%;
+  max-height: 0;
+  float: left;
+  transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+  overflow: hidden;
+}
+
+.details [class*="row-"] {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.details .image {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 50%;
+}
+
+.contain {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+
+.cover {
+  background-size: cover;
+  background-clip: content-box;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+
+.details .title {
+  font-size: 2em;
+  margin-bottom: 24px;
+}
+
+.project-1 .intro .image, .project-3 .intro .image, .project-5 .intro .image {
   left: 0;
 }
 
-.project-1 .text, .project-3 .text, .project-5 .text {
+.project-1 .intro .text, .project-3 .intro .text, .project-5 .intro .text {
   float: right;
 }
 
-.project-2, .project-4 {
-  /*background: linear-gradient(300deg, #607d8b, #fff 60%);*/
-}
-
-.project-2 .image, .project-4 .image {
+.project-2 .intro .image, .project-4 .intro .image {
   right: 0;
 }
 
-.project-2 .text, .project-4 .text {
+.project-2 .intro .text, .project-4 .intro .text {
   float: left;
 }
 
-.project-1 .image {
+.project-1 .intro .image {
   background-image: url("img/journeytothebees.png");
 }
 
-.project-2 .image {
+.project-2 .intro .image {
   background-image: url("img/nearbuy.png");
 }
 
-.project-3 .image {
+.project-3 .intro .image {
   background-image: url("img/treasuresoftriad.png");
 }
 
-.project-4 .image {
+.project-4 .intro .image {
   background-image: url("img/mtrmobile.png");
 }
 
-.project-5 .image {
-  background-image: url("img/logos.png");
+.project-5 .intro .image {
+  background-image: url("img/logodesigns.png");
+}
+
+.project-1 .intro .text, .project-2 .intro .text {
+  padding-bottom: 32px;
+}
+
+.project-1 .details .row-1 .image {
+  background-image: url("img/journeytothebees-levels.png");
+  right: 0;
+}
+
+.project-1 .details .row-2 .image {
+  background-image: url("img/journeytothebees-research.jpg");
+  left: 0;
+}
+
+.project-1 .details .row-3 .image {
+  background-position: center top;
+  background-image: url("img/journeytothebees-platform.png");
+  right: 0;
+}
+
+.project-2 .details .row-1 .image {
+  background-image: url("img/nearbuy-family.png");
+  left: 0;
+}
+
+.project-2 .details .row-2 .image {
+  background-position: center 90%;
+  background-image: url("img/nearbuy-reminders.png");
+  right: 0;
+}
+
+.project-2 .details .row-3 .image {
+  background-position: center 30%;
+  background-image: url("img/nearbuy-checks.png");
+  left: 0;
+}
+
+@media all and (min-width: 769px) {
+  .project-1 .details .row-1 .image {
+    padding: 24px 48px 24px 0;
+  }
+  .project-1 .details .row-2 .image {
+    padding: 24px 0 24px 48px;
+  }
+  .project-1 .details .row-3 .image {
+    padding: 24px 48px 48px 0;
+  }
+  .project-2 .details .row-1 .image {
+    padding: 24px 0 24px 48px;
+  }
+  .project-2 .details .row-2 .image {
+    padding: 24px 48px 24px 0;
+  }
+  .project-2 .details .row-3 .image {
+    padding: 24px 0 48px 48px;
+  }
+}
+
+.project-1 .details .row-1 .text, .project-1 .details .row-1 .text, .project-2 .details .row-2 .text {
+  float: left;
+}
+
+.project-1 .details .row-2 .text, .project-2 .details .row-1 .text, .project-2 .details .row-3 .text {
+  float: right;
 }
 
 .lightbox {
@@ -372,6 +499,7 @@ a:link, a:hover, a:active, a:visited {
   right: -36px;
   color: #fff;
   font-size: 24px;
+  cursor: pointer;
 }
 
 @media all and (orientation: portrait) {
@@ -381,10 +509,6 @@ a:link, a:hover, a:active, a:visited {
   .lightbox .iframe-container i {
     right: 12px;
   }
-}
-
-.project-3 .image {
-  /*transform: translateY(-8vw);*/
 }
 
 .hide-bottom {
@@ -525,22 +649,43 @@ a:link, a:hover, a:active, a:visited {
     font-size: 1em;
     padding: 5vh 6px 12px 6px;
   }
-  .image {
+  .intro .image {
     width: 100%;
     height: 40vh;
   }
-  .text {
+  .intro .text {
     width: 100%;
     margin-top: 40vh;
     padding: 48px 12px 24px 24px;
   }
-  .title {
+  .intro .title {
     font-size: 1.5em;
   }
-  .description {
+  .intro .description {
     font-size: 1em;
   }
-  .action {
+  .intro .action {
     font-size: 1.125em;
+  }
+  .details .image {
+    width: 100%;
+    height: 20vh;
+  }
+  .details .cover {
+    padding: 0;
+  }
+  .details .contain {
+    padding: 0 24px;
+  }
+  .details .text {
+    width: 100%;
+    margin-top: 20vh;
+    padding: 48px 12px 24px 24px;
+  }
+  .details .title {
+    font-size: 1.5em;
+  }
+  .details .description {
+    font-size: 1em;
   }
 }
