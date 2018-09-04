@@ -26,9 +26,10 @@ $("a").click(function() {
 //landing logo parallax scrolling & topnav icon animation
 
 $(window).scroll(function() {
-  var parallaxRatio = (10 + ($(window).scrollTop() / 10) + 'vh');
+  var parallaxRatio = (0 - ($(window).scrollTop() / 5) + 'vh');
   var parallaxFade = 0.5 - ($(window).scrollTop() / 500);
-  $("#logoparallax").css("bottom", parallaxRatio);
+  //$("#logoparallax").css("bottom", parallaxRatio);
+  $("#logoparallax").css("transform", "translateY("+parallaxRatio+")");
   $("#logoparallax").css("opacity", parallaxFade);
   /*
   var colorAnimation = false;

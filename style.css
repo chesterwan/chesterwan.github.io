@@ -90,8 +90,6 @@ a:link, a:hover, a:active, a:visited {
   line-height: 1.6;
 }
 
-@keyframes logo-animation-parent {}
-
 @keyframes logo-animation-child {
   0% {
     transform: scale(0.8);
