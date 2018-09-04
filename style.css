@@ -21,7 +21,7 @@ a:link, a:hover, a:active, a:visited {
   position: fixed;
   width: 100%;
   z-index: 99;
-  padding: 0 10vw 0 5vw;
+  padding: 5vh 10vw 0 5vw;
   background-color: #212121;
   font-weight: 300;
   transition: all 0.3s cubic-bezier(0.7, 0, 0.3, 1) 0s;
@@ -43,8 +43,8 @@ a:link, a:hover, a:active, a:visited {
   color: #fff;
 }
 
-.unfold {
-  margin-top: 5vh;
+.fold-top {
+  transform: translateY(-5vh);
 }
 
 .background-gradient {
@@ -512,7 +512,6 @@ a:link, a:hover, a:active, a:visited {
 }
 
 .hide-bottom {
-  /*margin-top: 100vh;*/
   transform: translateY(100vh);
 }
 

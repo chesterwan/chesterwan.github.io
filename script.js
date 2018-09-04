@@ -4,9 +4,9 @@ var viewportHeight = $(window).height();
 
 $(window).scroll(function() {
   if ($(this).scrollTop() > (0.1 * viewportHeight)) {
-    $("#topnavscroll").removeClass("unfold");
+    $("#topnavscroll").addClass("fold-top");
   } else {
-    $("#topnavscroll").addClass("unfold");
+    $("#topnavscroll").removeClass("fold-top");
   }
 });
 
