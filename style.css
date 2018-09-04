@@ -602,8 +602,8 @@ a:link, a:hover, a:active, a:visited {
   .topnav {
     padding: 0 10vw;
   }
-  .unfold {
-    margin-top: 0;
+  .fold-top {
+    transform: translateY(0);
   }
   .landing {
     padding: 32vh 10vw 5vh 10vw;
