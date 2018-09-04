@@ -53,7 +53,7 @@ a:link, a:hover, a:active, a:visited {
 
 .background-gradient {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
@@ -258,6 +258,7 @@ a:link, a:hover, a:active, a:visited {
   background-color: #fff;
   width: 80%;
   float: left;
+  visibility: visible;
 }
 
 .intro {
@@ -564,6 +565,7 @@ a:link, a:hover, a:active, a:visited {
 .hide-bottom {
   -webkit-transform: translateY(100vh);
   transform: translateY(100vh);
+  visibility: hidden;
 }
 
 /*
