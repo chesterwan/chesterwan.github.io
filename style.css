@@ -253,12 +253,11 @@ a:link, a:hover, a:active, a:visited {
   display: block;
   -webkit-transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;
   transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;
-  position: relative;
   z-index: 8;
   background-color: #fff;
   width: 80%;
   float: left;
-  visibility: visible;
+  visibility: hidden;
 }
 
 .intro {
@@ -565,7 +564,6 @@ a:link, a:hover, a:active, a:visited {
 .hide-bottom {
   -webkit-transform: translateY(100vh);
   transform: translateY(100vh);
-  visibility: hidden;
 }
 
 /*
