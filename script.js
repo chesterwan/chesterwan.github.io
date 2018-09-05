@@ -66,7 +66,7 @@ function iconColorCycle() {
   });
 }
 */
-/*
+
 //project-1 sliding
 
 $(window).scroll(function() {
@@ -76,7 +76,7 @@ $(window).scroll(function() {
     $("#p1sliding").addClass("hide-bottom");
   }
 });
-*/
+
 //project-1 details
 
 var p1DetailsActive = false;
@@ -94,7 +94,7 @@ $("#p1detailstoggle").click(function() {
 });
 
 //project-2 sliding
-/*
+
 $(window).scroll(function() {
   if ($(this).scrollTop() > (0.1 * viewportHeight)) {
     $("#p2sliding").removeClass("hide-bottom");
@@ -102,7 +102,7 @@ $(window).scroll(function() {
     $("#p2sliding").addClass("hide-bottom");
   }
 });
-*/
+
 //project-2 lightbox
 
 $("#p2lightboxopen").click(function() {
@@ -132,7 +132,7 @@ $("#p2detailstoggle").click(function() {
     $("#p2detailstoggle > i").addClass("fa-angle-up");
   }
 });
-/*
+
 //project-3 sliding
 
 $(window).scroll(function() {
@@ -162,4 +162,3 @@ $(window).scroll(function() {
     $("#p5sliding").addClass("hide-bottom");
   }
 });
-*/
