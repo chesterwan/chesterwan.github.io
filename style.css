@@ -246,17 +246,18 @@ a:link, a:hover, a:active, a:visited {
 
 #projects {
   overflow: hidden;
+  padding: 5vw 10vw 0 10vw;
 }
 
 [class*="project-"] {
-  margin: 5vw 10vw 0 10vw;
+  margin-bottom: 5vw;
   display: block;
   -webkit-transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;
   transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;
   position: relative;
   z-index: 8;
   background-color: #fff;
-  width: 80%;
+  width: 100%;
   float: left;
 }
 
@@ -601,7 +602,7 @@ a:link, a:hover, a:active, a:visited {
 #contact {
   display: inline-block;
   width: 80%;
-  margin: 10vw 10vw 5vw 10vw;
+  margin: 5vw 10vw;
 }
 
 .message {
