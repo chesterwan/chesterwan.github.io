@@ -67,26 +67,6 @@ function iconColorCycle() {
 }
 */
 
-//projects hiding on load
-
-$(document).ready(function(){
-  $("#p1sliding").addClass("hide-bottom");
-  $("#p2sliding").addClass("hide-bottom");
-  $("#p3sliding").addClass("hide-bottom");
-  $("#p4sliding").addClass("hide-bottom");
-  $("#p5sliding").addClass("hide-bottom");
-});
-
-$(window).scroll(function() {
-  if ($(this).scrollTop() > 0) {
-    $("#p1sliding").css("visibility", "visible");
-    $("#p2sliding").css("visibility", "visible");
-    $("#p3sliding").css("visibility", "visible");
-    $("#p4sliding").css("visibility", "visible");
-    $("#p5sliding").css("visibility", "visible");
-  }
-});
-
 //project-1 sliding
 
 $(window).scroll(function() {
