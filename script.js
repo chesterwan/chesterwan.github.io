@@ -69,7 +69,7 @@ function iconColorCycle() {
 
 //projects hiding on load
 
-$(document).ready(function(){
+$(window).on("load", function(){
   $("#p1sliding").addClass("hide-bottom");
   $("#p2sliding").addClass("hide-bottom");
   $("#p3sliding").addClass("hide-bottom");
