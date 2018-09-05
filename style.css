@@ -18,18 +18,6 @@ a:link, a:hover, a:active, a:visited {
   text-decoration: none;
 }
 
-.loading {
-  width: 100vw;
-  min-height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: -webkit-linear-gradient(linear, left top, left bottom, color-stop(20%, #212121), to(#263238));
-  background: linear-gradient(180deg, #212121 20%, #263238);
-  z-index: 200;
-  transition: all 0.3s linear 0s;
-}
-
 .topnav {
   overflow: hidden;
   position: fixed;

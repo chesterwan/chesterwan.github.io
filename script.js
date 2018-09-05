@@ -1,9 +1,3 @@
-//loading
-
-$(document).ready(function(){
-  $("#loadingscreen").css("opacity", 0);
-});
-
 //topnav scrolling
 
 var viewportHeight = $(window).height();
