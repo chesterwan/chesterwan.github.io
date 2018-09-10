@@ -375,7 +375,6 @@ a:link, a:hover, a:active, a:visited {
   display: inline-block;
   position: relative;
   width: 100%;
-  margin-top: 24px;
 }
 
 .details .image {
@@ -441,7 +440,7 @@ a:link, a:hover, a:active, a:visited {
   background-image: url("img/logodesigns.png");
 }
 
-.project-1 .intro .text, .project-2 .intro .text {
+.project-1 .intro .text, .project-2 .intro .text, .project-3 .intro .text {
   padding-bottom: 32px;
 }
 
@@ -478,7 +477,23 @@ a:link, a:hover, a:active, a:visited {
   left: 0;
 }
 
-@media all and (min-width: 769px) {
+.project-3 .details .row-1 .image {
+  background-image: url("img/treasuresoftriad-characters.png");
+  right: 0;
+}
+
+.project-3 .details .row-2 .image {
+  background-position: center 80%;
+  background-image: url("img/treasuresoftriad-chapters.png");
+  left: 0;
+}
+
+.project-3 .details .row-3 .image {
+  background-image: url("img/treasuresoftriad-mechanic.png");
+  right: 0;
+}
+
+@media all and (min-width: 769px) and (orientation: landscape) {
   .project-1 .details .row-1 .image {
     padding: 24px 48px 24px 0;
   }
@@ -497,13 +512,22 @@ a:link, a:hover, a:active, a:visited {
   .project-2 .details .row-3 .image {
     padding: 24px 0 48px 48px;
   }
+  .project-3 .details .row-1 .image {
+    padding: 24px 48px 24px 0;
+  }
+  .project-3 .details .row-2 .image {
+    padding: 24px 0 24px 48px;
+  }
+  .project-3 .details .row-3 .image {
+    padding: 24px 48px 48px 0;
+  }
 }
 
-.project-1 .details .row-1 .text, .project-1 .details .row-1 .text, .project-2 .details .row-2 .text {
+.project-1 .details .row-1 .text, .project-1 .details .row-3 .text, .project-2 .details .row-2 .text, .project-3 .details .row-1 .text, .project-3 .details .row-3 .text {
   float: left;
 }
 
-.project-1 .details .row-2 .text, .project-2 .details .row-1 .text, .project-2 .details .row-3 .text {
+.project-1 .details .row-2 .text, .project-2 .details .row-1 .text, .project-2 .details .row-3 .text, .project-3 .details .row-2 .text {
   float: right;
 }
 
@@ -677,9 +701,6 @@ a:link, a:hover, a:active, a:visited {
   [class*="project-"] {
     width: 100%;
   }
-  .hide-bottom {
-    margin-top: 100vh;
-  }
   .message {
     font-size: 1.5em;
   }
@@ -699,7 +720,7 @@ a:link, a:hover, a:active, a:visited {
   }
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 768px), all and (orientation: portrait) {
   .topnav a {
     font-size: 1em;
     padding: 5vh 6px 12px 6px;
@@ -730,12 +751,12 @@ a:link, a:hover, a:active, a:visited {
     padding: 0;
   }
   .details .contain {
-    padding: 0 24px;
+    padding: 24px 24px 0 24px;
   }
   .details .text {
     width: 100%;
     margin-top: 20vh;
-    padding: 48px 12px 24px 24px;
+    padding: 24px 12px 24px 24px;
   }
   .details .title {
     font-size: 1.5em;

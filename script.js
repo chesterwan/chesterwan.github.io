@@ -143,6 +143,22 @@ $(window).scroll(function() {
   }
 });
 
+//project-3 details
+
+var p3DetailsActive = false;
+
+$("#p3detailstoggle").click(function() {
+  if ($("#p3details").height() > 0) {
+    $("#p3details").css("max-height", 0);
+    $("#p3detailstoggle > i").removeClass("fa-angle-up");
+    $("#p3detailstoggle > i").addClass("fa-angle-down");
+  } else {
+    $("#p3details").css("max-height", $("#p3details").prop("scrollHeight") + "px");
+    $("#p3detailstoggle > i").removeClass("fa-angle-down");
+    $("#p3detailstoggle > i").addClass("fa-angle-up");
+  }
+});
+
 //project-4 sliding
 
 $(window).scroll(function() {
