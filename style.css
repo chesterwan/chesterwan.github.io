@@ -377,6 +377,10 @@ a:link, a:hover, a:active, a:visited {
   width: 100%;
 }
 
+.details [class*="row-"]:first-child {
+  margin-top: 24px;
+}
+
 .details .image {
   position: absolute;
   top: 0;
