@@ -29,7 +29,9 @@ $(window).scroll(function() {
   var parallaxRatio = (0 - ($(window).scrollTop() / 5) + 'vh');
   var parallaxFade = 0.5 - ($(window).scrollTop() / 500);
   //$("#logoparallax").css("bottom", parallaxRatio);
-  $("#logoparallax").css("transform", "translateY("+parallaxRatio+")");
+  if ($(window).width() > 768 && $(window).width() >= $(window).height()) {
+    $("#logoparallax").css("transform", "translateY(" + parallaxRatio + ")");
+  }
   $("#logoparallax").css("opacity", parallaxFade);
   /*
   var colorAnimation = false;
