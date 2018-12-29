@@ -53,7 +53,7 @@ a:link, a:hover, a:active, a:visited {
 
 .background-gradient {
   width: 100vw;
-  min-height: 100vh;
+  min-height: 110vh;
   position: fixed;
   top: 0;
   left: 0;
