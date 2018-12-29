@@ -57,8 +57,8 @@ a:link, a:hover, a:active, a:visited {
   position: fixed;
   top: 0;
   left: 0;
-  background: -webkit-linear-gradient(linear, left top, left bottom, color-stop(20%, #212121), to(80%, #263238));
-  background: linear-gradient(180deg, #212121 20%, #263238 80%);
+  background: -webkit-linear-gradient(linear, left top, left bottom, color-stop(20%, #212121), to(70%, #263238));
+  background: linear-gradient(180deg, #212121 20%, #263238 70%);
   z-index: -99;
 }
 
