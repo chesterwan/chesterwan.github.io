@@ -18,6 +18,11 @@ a:link, a:hover, a:active, a:visited {
   text-decoration: none;
 }
 
+::selection {
+  background: #009688;
+  color: #fff;
+}
+
 .topnav {
   overflow: hidden;
   position: fixed;
