@@ -68,7 +68,7 @@ a:link, a:hover, a:active, a:visited {
 }
 
 .landing {
-  padding: 40vh 10vw 5vh 10vw;
+  padding: 40vh 10vw 10vh 10vw;
   display: block;
   width: 100%;
   overflow: hidden;
@@ -92,6 +92,7 @@ a:link, a:hover, a:active, a:visited {
   display: block;
   color: #fff;
   padding: 0;
+  padding-left: 0.3vh;
   font-size: 1.5em;
   text-align: left;
   font-weight: 700;
@@ -107,17 +108,20 @@ a:link, a:hover, a:active, a:visited {
     margin: 2.5%;
     opacity: 0.2;
   }
+
   10% {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     margin: 3%;
     opacity: 1;
   }
+
   20% {
     -webkit-transform: scale(1);
     transform: scale(1);
     margin: 2.5%;
   }
+
   100% {
     -webkit-transform: scale(0.8);
     transform: scale(0.8);
@@ -132,17 +136,20 @@ a:link, a:hover, a:active, a:visited {
     margin: 2.5%;
     opacity: 0.2;
   }
+
   10% {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     margin: 3%;
     opacity: 1;
   }
+
   20% {
     -webkit-transform: scale(1);
     transform: scale(1);
     margin: 2.5%;
   }
+
   100% {
     -webkit-transform: scale(0.8);
     transform: scale(0.8);
@@ -187,64 +194,64 @@ a:link, a:hover, a:active, a:visited {
 }
 
 .logo [class*="square-"]:nth-child(1) {
-  -webkit-animation-delay: -8.34s;
-  animation-delay: -8.34s;
+  -webkit-animation-delay: calc(15s / 9 * 0);
+  animation-delay: calc(15s / 9 * 0);
   background-color: #fff;
   background: linear-gradient(300deg, #b0bec5, #fff);
 }
 
 .logo [class*="square-"]:nth-child(2) {
-  -webkit-animation-delay: 0s;
-  animation-delay: 0s;
+  -webkit-animation-delay: calc(15s / 9 * -8);
+  animation-delay: calc(15s / 9 * -8);
   background-color: #009688;
   background: linear-gradient(300deg, #004d40, #009688);
 }
 
 .logo [class*="square-"]:nth-child(3) {
-  -webkit-animation-delay: -1.67s;
-  animation-delay: -1.67s;
+  -webkit-animation-delay: calc(15s / 9 * -7);
+  animation-delay: calc(15s / 9 * -7);
   background-color: #009688;
   background: linear-gradient(300deg, #004d40, #009688);
 }
 
 .logo [class*="square-"]:nth-child(4) {
-  -webkit-animation-delay: -10s;
-  animation-delay: -10s;
+  -webkit-animation-delay: calc(15s / 9 * -2);
+  animation-delay: calc(15s / 9 * -2);
   background-color: #ff9800;
   background: linear-gradient(300deg, #e65100, #ff9800);
 }
 
 .logo [class*="square-"]:nth-child(5) {
-  -webkit-animation-delay: -6.67s;
-  animation-delay: -6.67s;
+  -webkit-animation-delay: calc(15s / 9 * -1);
+  animation-delay: calc(15s / 9 * -1);
   background-color: #fff;
   background: linear-gradient(300deg, #b0bec5, #fff);
 }
 
 .logo [class*="square-"]:nth-child(6) {
-  -webkit-animation-delay: -3.34s;
-  animation-delay: -3.34s;
+  -webkit-animation-delay: calc(15s / 9 * -6);
+  animation-delay: calc(15s / 9 * -6);
   background-color: #009688;
   background: linear-gradient(300deg, #004d40, #009688);
 }
 
 .logo [class*="square-"]:nth-child(7) {
-  -webkit-animation-delay: -11.67s;
-  animation-delay: -11.67s;
+  -webkit-animation-delay: calc(15s / 9 * -3);
+  animation-delay: calc(15s / 9 * -3);
   background-color: #ff9800;
   background: linear-gradient(300deg, #e65100, #ff9800);
 }
 
 .logo [class*="square-"]:nth-child(8) {
-  -webkit-animation-delay: -13.34s;
-  animation-delay: -13.34s;
+  -webkit-animation-delay: calc(15s / 9 * -4);
+  animation-delay: calc(15s / 9 * -4);
   background-color: #ff9800;
   background: linear-gradient(300deg, #e65100, #ff9800);
 }
 
 .logo [class*="square-"]:nth-child(9) {
-  -webkit-animation-delay: -5s;
-  animation-delay: -5s;
+  -webkit-animation-delay: calc(15s / 9 * -5);
+  animation-delay: calc(15s / 9 * -5);
   background-color: #fff;
   background: linear-gradient(300deg, #b0bec5, #fff);
 }
@@ -279,7 +286,9 @@ a:link, a:hover, a:active, a:visited {
   position: absolute;
   top: 0;
   height: 100%;
-  width: 50%;
+  width: 100%;
+  -webkit-transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+  transition: all 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;
 }
 
 .text {
@@ -506,27 +515,35 @@ a:link, a:hover, a:active, a:visited {
   .project-1 .details .row-1 .image {
     padding: 24px 48px 24px 0;
   }
+
   .project-1 .details .row-2 .image {
     padding: 24px 0 24px 48px;
   }
+
   .project-1 .details .row-3 .image {
     padding: 24px 48px 48px 0;
   }
+
   .project-2 .details .row-1 .image {
     padding: 24px 0 24px 48px;
   }
+
   .project-2 .details .row-2 .image {
     padding: 24px 48px 24px 0;
   }
+
   .project-2 .details .row-3 .image {
     padding: 24px 0 48px 48px;
   }
+
   .project-3 .details .row-1 .image {
     padding: 24px 48px 24px 0;
   }
+
   .project-3 .details .row-2 .image {
     padding: 24px 0 24px 48px;
   }
+
   .project-3 .details .row-3 .image {
     padding: 24px 48px 48px 0;
   }
@@ -590,6 +607,7 @@ a:link, a:hover, a:active, a:visited {
   .lightbox {
     padding: 0;
   }
+
   .lightbox .iframe-container i {
     right: 12px;
   }
@@ -631,7 +649,6 @@ a:link, a:hover, a:active, a:visited {
   animation-delay: 0;
 }
 */
-
 #contact {
   display: inline-block;
   width: 80%;
@@ -649,7 +666,7 @@ a:link, a:hover, a:active, a:visited {
   padding-right: 4vw;
 }
 
-.email, .facebook {
+.email, .sdpolyu {
   display: block;
   width: 33%;
   float: right;
@@ -665,7 +682,7 @@ a:link, a:hover, a:active, a:visited {
   color: #009688;
 }
 
-.facebook i {
+.sdpolyu i {
   margin: 0 100% 24px 0;
   color: #ff9800;
 }
@@ -681,49 +698,62 @@ a:link, a:hover, a:active, a:visited {
   color: #9e9e9e;
   font-size: 0.75em;
   text-align: center;
+  user-select: none;
 }
 
 @media all and (max-width: 600px) {
   .topnav {
     padding: 0 10vw;
   }
+
   .fold-top {
     -webkit-transform: translateY(0);
     transform: translateY(0);
   }
+
   .landing {
     padding: 32vh 10vw 5vh 10vw;
   }
+
   .name {
     font-size: 3em;
   }
+
   .occupation {
     font-size: 1.125em;
   }
+
   .logo {
     width: 40vh;
     height: 40vh;
   }
+
   #projects {
     padding: 5vw 0 0 0;
   }
+
   [class*="project-"] {
     width: 100%;
   }
+
   .message {
     font-size: 1.5em;
   }
-  .email, .facebook {
+
+  .email, .sdpolyu {
     width: 60%;
     font-size: 1.125em;
     padding: 0 0 24px 2vw;
   }
+
   .email i {
     margin: 0 12px 12px 0;
   }
-  .facebook i {
-    margin: 0 20px 12px 0;
+
+  .sdpolyu i {
+    margin: 0 8px 12px 0;
   }
+
   .address {
     margin-left: 1.875em;
   }
@@ -734,42 +764,53 @@ a:link, a:hover, a:active, a:visited {
     font-size: 1em;
     padding: 5vh 6px 12px 6px;
   }
+
   .intro .image {
     width: 100%;
     height: 40vh;
   }
+
   .intro .text {
     width: 100%;
     margin-top: 40vh;
     padding: 48px 12px 24px 24px;
   }
+
   .intro .title {
     font-size: 1.5em;
   }
+
   .intro .description {
     font-size: 1em;
   }
+
   .intro .action {
     font-size: 1.125em;
   }
+
   .details .image {
     width: 100%;
     height: 20vh;
   }
+
   .details .cover {
     padding: 0;
   }
+
   .details .contain {
     padding: 24px 24px 0 24px;
   }
+
   .details .text {
     width: 100%;
     margin-top: 20vh;
     padding: 24px 12px 24px 24px;
   }
+
   .details .title {
     font-size: 1.5em;
   }
+
   .details .description {
     font-size: 1em;
   }

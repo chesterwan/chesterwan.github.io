@@ -1,6 +1,14 @@
-//topnav scrolling
+//var updates
 
-var viewportHeight = $(window).height();
+var viewportHeight = window.innerHeight;
+var viewportWidth = window.innerWidth;
+
+$(window).resize(function() {
+  viewportHeight = window.innerHeight;
+  viewportWidth = window.innerWidth;
+});
+
+//topnav scrolling
 
 $(window).scroll(function() {
   if ($(this).scrollTop() > (0.1 * viewportHeight)) {
@@ -69,6 +77,49 @@ function iconColorCycle() {
 }
 */
 
+//projects image cover
+
+$(document).scroll(function() {
+  if ((viewportWidth > 768) && (viewportWidth > viewportHeight)) {
+    setInterval(function() {
+      if ($(this).scrollTop() > ($("#p1sliding").offset().top - (viewportHeight / 2.5))) {
+        $("#p1introimage").css("width", 50 + "%");
+      } else {
+        $("#p1introimage").css("width", 100 + "%");
+        $("#p1details").css("max-height", 0);
+        $("#p1detailstoggle > i").removeClass("fa-angle-up");
+        $("#p1detailstoggle > i").addClass("fa-angle-down");
+      }
+      if ($(this).scrollTop() > ($("#p2sliding").offset().top - (viewportHeight / 2.5))) {
+        $("#p2introimage").css("width", 50 + "%");
+      } else {
+        $("#p2introimage").css("width", 100 + "%");
+        $("#p2details").css("max-height", 0);
+        $("#p2detailstoggle > i").removeClass("fa-angle-up");
+        $("#p2detailstoggle > i").addClass("fa-angle-down");
+      }
+      if ($(this).scrollTop() > ($("#p3sliding").offset().top - (viewportHeight / 2.5))) {
+        $("#p3introimage").css("width", 50 + "%");
+      } else {
+        $("#p3introimage").css("width", 100 + "%");
+        $("#p3details").css("max-height", 0);
+        $("#p3detailstoggle > i").removeClass("fa-angle-up");
+        $("#p3detailstoggle > i").addClass("fa-angle-down");
+      }
+      if ($(this).scrollTop() > ($("#p4sliding").offset().top - (viewportHeight / 2.5))) {
+        $("#p4introimage").css("width", 50 + "%");
+      } else {
+        $("#p4introimage").css("width", 100 + "%");
+      }
+      if ($(this).scrollTop() > ($("#p5sliding").offset().top - (viewportHeight / 2.5))) {
+        $("#p5introimage").css("width", 50 + "%");
+      } else {
+        $("#p5introimage").css("width", 100 + "%");
+      }
+    }, 1000);
+  }
+});
+
 //project-1 sliding
 
 $(window).scroll(function() {
@@ -80,8 +131,6 @@ $(window).scroll(function() {
 });
 
 //project-1 details
-
-var p1DetailsActive = false;
 
 $("#p1detailstoggle").click(function() {
   if ($("#p1details").height() > 0) {
@@ -121,8 +170,6 @@ $("#p2lightboxclose").click(function() {
 
 //project-2 details
 
-var p2DetailsActive = false;
-
 $("#p2detailstoggle").click(function() {
   if ($("#p2details").height() > 0) {
     $("#p2details").css("max-height", 0);
@@ -146,8 +193,6 @@ $(window).scroll(function() {
 });
 
 //project-3 details
-
-var p3DetailsActive = false;
 
 $("#p3detailstoggle").click(function() {
   if ($("#p3details").height() > 0) {
