@@ -8,7 +8,7 @@ $(window).resize(function() {
   //window.location.reload();
   viewportHeight = $(window).height();
   viewportWidth = $(window).width();
-  setTimeout(function(){
+  setTimeout(function() {
     $("body").removeClass("preload");
   }, 300);
   /*
@@ -69,13 +69,16 @@ $("a").click(function() {
 //landing logo parallax scrolling
 
 $(window).scroll(function() {
-  var parallaxRatio = (0 - ($(window).scrollTop() / 5) + 'vh');
-  var parallaxFade = 1 - ($(window).scrollTop() / 100);
-  //$("#logoparallax").css("bottom", parallaxRatio);
-  if ($(window).width() > 1024 && $(window).width() >= $(window).height()) {
-    $("#logoparallax, #logoeffectparallax").css("transform", "translateY(" + parallaxRatio + ")");
-  }
-  $("#logoparallax, #logoeffectparallax").css("opacity", parallaxFade);
+  clearInterval();
+  setInterval(function() {
+    var parallaxRatio = (0 - ($(window).scrollTop() / 5) + 'vh');
+    var parallaxFade = 1 - ($(window).scrollTop() / 100);
+    //$("#logoparallax").css("bottom", parallaxRatio);
+    if ($(window).width() > 1024 && $(window).width() >= $(window).height()) {
+      $("#logoparallax, #logoeffectparallax").css("transform", "translateY(" + parallaxRatio + ")");
+    }
+    $("#logoparallax, #logoeffectparallax").css("opacity", parallaxFade);
+  }, 10);
 });
 
 //langing logo mouse animation
