@@ -4,9 +4,13 @@ var viewportHeight = $(window).height();
 var viewportWidth = $(window).width();
 
 $(window).resize(function() {
-  window.location.reload();
+  $("body").addClass("preload");
+  //window.location.reload();
   viewportHeight = $(window).height();
   viewportWidth = $(window).width();
+  setTimeout(function(){
+    $("body").removeClass("preload");
+  }, 300);
   /*
   if ($(this).scrollTop() < ($("#projects").offset().top) - viewportHeight * 0.4) {
     $(this).scrollTop($("#home").offset().top);
@@ -151,52 +155,71 @@ $("#aboutclose, #home, #projects").click(function() {
   }
 });
 
+$(window).resize(function() {
+  if ($("#about").hasClass("reveal-right")) {
+    $("#topnavabout, #sidenavabout").click();
+    if ((window.matchMedia('(min-width: 1025px)').matches) && (window.matchMedia('(orientation: landscape)').matches)) {
+      $("#logoparallax, #logoeffectparallax").css("left", -50 + "vw");
+      $("#topnavscroll").css("padding-left", 5 + "vw");
+      $("#home").css("padding-left", 5 + "vw");
+    } else {
+      $("#logoparallax, #logoeffectparallax").css("left", 0);
+      $("#topnavscroll").css("padding-left", 10 + "vw");
+      $("#home").css("padding-left", 10 + "vw");
+    }
+  } else {
+    $("#aboutclose, #home, #projects").click();
+    $("#logoparallax, #logoeffectparallax").css("left", 0);
+    $("#topnavscroll").css("padding-left", 10 + "vw");
+    $("#home").css("padding-left", 10 + "vw");
+  }
+});
+
 //projects image cover animation
 
-$(window).scroll(function() {
+$(window).on("scroll resize", function() {
   //if ((viewportWidth > 768) && (viewportWidth > viewportHeight)) {}
   if ((window.matchMedia('(min-width: 1025px)').matches) && (window.matchMedia('(orientation: landscape)').matches)) {
-    setInterval(function() {
-      if ($(this).scrollTop() > ($("#p1sliding").offset().top - (viewportHeight / 2.5))) {
-        $("#p1introimage").css("width", 50 + "%");
-      } else {
-        $("#p1introimage").css("width", 100 + "%");
-        $("#p1details, #p2details, #p3details, #p4details").css("max-height", 0);
-        $("#p1detailstoggle > i, #p2detailstoggle > i, #p3detailstoggle > i, #p4detailstoggle > i").removeClass("fa-angle-up");
-        $("#p1detailstoggle > i, #p2detailstoggle > i, #p3detailstoggle > i, #p4detailstoggle > i").addClass("fa-angle-down");
-        $("#p1sliding, #p2sliding, #p3sliding, #p4sliding").css("background-color", "#fff");
-        $("#p1introimage, #p2introimage, #p3introimage, #p4introimage").css({
-          "-webkit-filter": "brightness(1)",
-          "filter": "brightness(1)"
-        });
-      }
-      if ($(this).scrollTop() > ($("#p2sliding").offset().top - (viewportHeight / 2.5))) {
-        $("#p2introimage").css("width", 50 + "%");
-      } else if ($("#p2details").height() <= 0) {
-        $("#p2introimage").css("width", 100 + "%");
-      }
-      if ($(this).scrollTop() > ($("#p3sliding").offset().top - (viewportHeight / 2.5))) {
-        $("#p3introimage").css("width", 50 + "%");
-      } else if ($("#p3details").height() <= 0) {
-        $("#p3introimage").css("width", 100 + "%");
-      }
-      if ($(this).scrollTop() > ($("#p4sliding").offset().top - (viewportHeight / 2.5))) {
-        $("#p4introimage").css("width", 50 + "%");
-      } else if ($("#p4details").height() <= 0) {
-        $("#p4introimage").css("width", 100 + "%");
-      }
-      if ($(this).scrollTop() > ($("#p5sliding").offset().top - (viewportHeight / 2.5))) {
-        $("#p5introimage").css("width", 50 + "%");
-      } else {
-        $("#p5introimage").css("width", 100 + "%");
-      }
-      if ($(this).scrollTop() > ($("#p6sliding").offset().top - (viewportHeight / 2.5))) {
-        $("#p6introimage").css("width", 50 + "%");
-      } else {
-        $("#p6introimage").css("width", 100 + "%");
-      }
-    }, 1000);
+    if ($(this).scrollTop() > ($("#p1sliding").offset().top - (viewportHeight / 2.5))) {
+      $("#p1introimage").css("width", 50 + "%");
+    } else {
+      $("#p1introimage").css("width", 100 + "%");
+      $("#p1details, #p2details, #p3details, #p4details").css("max-height", 0);
+      $("#p1detailstoggle > i, #p2detailstoggle > i, #p3detailstoggle > i, #p4detailstoggle > i").removeClass("fa-angle-up");
+      $("#p1detailstoggle > i, #p2detailstoggle > i, #p3detailstoggle > i, #p4detailstoggle > i").addClass("fa-angle-down");
+      $("#p1sliding, #p2sliding, #p3sliding, #p4sliding").css("background-color", "#fff");
+      $("#p1introimage, #p2introimage, #p3introimage, #p4introimage").css({
+        "-webkit-filter": "brightness(1)",
+        "filter": "brightness(1)"
+      });
+    }
+    if ($(this).scrollTop() > ($("#p2sliding").offset().top - (viewportHeight / 2.5))) {
+      $("#p2introimage").css("width", 50 + "%");
+    } else if ($("#p2details").height() <= 0) {
+      $("#p2introimage").css("width", 100 + "%");
+    }
+    if ($(this).scrollTop() > ($("#p3sliding").offset().top - (viewportHeight / 2.5))) {
+      $("#p3introimage").css("width", 50 + "%");
+    } else if ($("#p3details").height() <= 0) {
+      $("#p3introimage").css("width", 100 + "%");
+    }
+    if ($(this).scrollTop() > ($("#p4sliding").offset().top - (viewportHeight / 2.5))) {
+      $("#p4introimage").css("width", 50 + "%");
+    } else if ($("#p4details").height() <= 0) {
+      $("#p4introimage").css("width", 100 + "%");
+    }
+    if ($(this).scrollTop() > ($("#p5sliding").offset().top - (viewportHeight / 2.5))) {
+      $("#p5introimage").css("width", 50 + "%");
+    } else {
+      $("#p5introimage").css("width", 100 + "%");
+    }
+    if ($(this).scrollTop() > ($("#p6sliding").offset().top - (viewportHeight / 2.5))) {
+      $("#p6introimage").css("width", 50 + "%");
+    } else {
+      $("#p6introimage").css("width", 100 + "%");
+    }
   } else {
+    $("#p1introimage, #p2introimage, #p3introimage, #p4introimage, #p5introimage, #p6introimage").css("width", 100 + "%");
     if ($(this).scrollTop() <= ($("#p1sliding").offset().top - (viewportHeight / 2.5))) {
       $("#p1details, #p2details, #p3details, #p4details").css("max-height", 0);
       $("#p1detailstoggle > i, #p2detailstoggle > i, #p3detailstoggle > i, #p4detailstoggle > i").removeClass("fa-angle-up");
@@ -231,7 +254,7 @@ $("#lightboxopenp1").click(function() {
     "overflow-y": "hidden",
     "margin-right": scrollbarWidth
   });
-  $("#ytplayer").attr('src', "https://www.youtube.com/embed/rY-FJvRqK0E?autoplay=1&rel=0&enablejsapi=1&version=3");
+  $("#ytplayer").attr('src', "https://www.youtube.com/embed/7I4KskvREoA?autoplay=1&rel=0&enablejsapi=1&version=3");
   $("#lightbox").addClass("reveal-front");
   $("#ytplayer")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
 });
