@@ -1001,7 +1001,7 @@ a:link, a:hover, a:active, a:visited {
   }
 
   .about {
-    padding: 20vh 5vw 20vh 5vw !important;
+    padding: 15vh 5vw 0 5vw !important;
   }
 
   .about .action {
@@ -1011,6 +1011,25 @@ a:link, a:hover, a:active, a:visited {
 
   .about .text .title {
     font-size: 2em !important;
+  }
+
+  /*small screen*/
+  @media all and (max-height: 600px) {
+    .about {
+      padding: 5vh 5vw 0 5vw !important;
+    }
+  }
+
+  @media all and (max-height: 700px) {
+    .about .text .description {
+      font-size: 0.9em;
+    }
+  }
+
+  @media all and (max-height: 800px) {
+    .about .text .description {
+      line-height: 1.4;
+    }
   }
 
   .paragraphbreak {
@@ -1084,7 +1103,7 @@ a:link, a:hover, a:active, a:visited {
 
   .about {
     width: 100%;
-    padding: 30vh 10vw 20vh 10vw;
+    padding: 30vh 10vw 0 10vw;
   }
 
   .about .action {
@@ -1093,10 +1112,6 @@ a:link, a:hover, a:active, a:visited {
 
   .about .text .title {
     font-size: 3em;
-  }
-
-  .about .text .description {
-    font-size: 1em;
   }
 
   .reveal-right {

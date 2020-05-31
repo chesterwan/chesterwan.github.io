@@ -172,9 +172,15 @@ $(window).resize(function() {
     }
   } else {
     $("#aboutclose, #home, #projects").click();
-    $("#logoparallax, #logoeffectparallax").css("left", 0);
-    $("#topnavscroll").css("padding-left", 10 + "vw");
-    $("#home").css("padding-left", 10 + "vw");
+    if ((window.matchMedia('(min-width: 601px)').matches)) {
+      $("#logoparallax, #logoeffectparallax").css("left", 0);
+      $("#topnavscroll").css("padding-left", 10 + "vw");
+      $("#home").css("padding-left", 10 + "vw");
+    } else {
+      $("#logoparallax, #logoeffectparallax").css("left", 0);
+      $("#topnavscroll").css("padding-left", 5 + "vw");
+      $("#home").css("padding-left", 5 + "vw");
+    }
   }
 });
 
