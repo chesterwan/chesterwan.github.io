@@ -69,8 +69,7 @@ $("a").click(function() {
 //landing logo parallax scrolling
 
 $(window).scroll(function() {
-  clearInterval();
-  setInterval(function() {
+  if ($(this).scrollTop() < (0.2 * viewportHeight)) {
     var parallaxRatio = (0 - ($(window).scrollTop() / 5) + 'vh');
     var parallaxFade = 1 - ($(window).scrollTop() / 100);
     //$("#logoparallax").css("bottom", parallaxRatio);
@@ -78,7 +77,7 @@ $(window).scroll(function() {
       $("#logoparallax, #logoeffectparallax").css("transform", "translateY(" + parallaxRatio + ")");
     }
     $("#logoparallax, #logoeffectparallax").css("opacity", parallaxFade);
-  }, 10);
+  }
 });
 
 //langing logo mouse animation

@@ -1018,11 +1018,9 @@ a:link, a:hover, a:active, a:visited {
     .about {
       padding: 5vh 5vw 0 5vw !important;
     }
-  }
 
-  @media all and (max-height: 700px) {
     .about .text .description {
-      font-size: 0.9em;
+      font-size: 0.9em !important;
     }
   }
 
@@ -1112,6 +1110,10 @@ a:link, a:hover, a:active, a:visited {
 
   .about .text .title {
     font-size: 3em;
+  }
+
+  .about .text .description {
+    font-size: 1em;
   }
 
   .reveal-right {
