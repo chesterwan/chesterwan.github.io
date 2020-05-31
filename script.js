@@ -164,6 +164,10 @@ $(window).resize(function() {
       $("#logoparallax, #logoeffectparallax").css("left", -50 + "vw");
       $("#topnavscroll").css("padding-left", 5 + "vw");
       $("#home").css("padding-left", 5 + "vw");
+    } else if ((window.matchMedia('(max-width: 600px)').matches)) {
+      $("#logoparallax, #logoeffectparallax").css("left", 0);
+      $("#topnavscroll").css("padding-left", 5 + "vw");
+      $("#home").css("padding-left", 5 + "vw");
     } else {
       $("#logoparallax, #logoeffectparallax").css("left", 0);
       $("#topnavscroll").css("padding-left", 10 + "vw");
