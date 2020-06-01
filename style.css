@@ -740,6 +740,8 @@ a:link, a:hover, a:active, a:visited {
 
 .project-1 .details .row-6 .image {
   background-image: url("img/refles-workshop1.jpg");
+  -webkit-filter: grayscale(90%);
+  filter: grayscale(90%);
 }
 
 .project-1 .details .row-7 .image {
@@ -749,6 +751,8 @@ a:link, a:hover, a:active, a:visited {
 .project-1 .details .row-8 .image {
   background-image: url("img/refles-workshop3.jpg");
   background-position: 70% bottom;
+  -webkit-filter: grayscale(90%);
+  filter: grayscale(90%);
 }
 
 .project-1 .details .row-9 .image {
@@ -1166,7 +1170,7 @@ a:link, a:hover, a:active, a:visited {
   }
 
   .image.full {
-    padding-bottom: 48px !important;
+    padding: 0 24px 48px 24px !important;
   }
 
   .details .text {
