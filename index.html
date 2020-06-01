@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -12,6 +13,7 @@
   <link rel="shortcut icon" href="img/favicon.ico">
   <title>Chester Wan - Portfolio</title>
 </head>
+
 <body class="preload">
   <div class="topnav" id="topnavscroll">
     <a href="#home" class="icon">
@@ -27,17 +29,17 @@
       <div class="name">Chester<br>Wan</div>
       <div class="caption">Practicing UI/UX&nbsp;Design&nbsp;& Game&nbsp;Design</div>
       <!--<div id="logolayereffect">-->
-        <div class="logo-effect" id="logoeffectparallax">
-          <div class="square-1"></div>
-          <div class="square-2"></div>
-          <div class="square-3"></div>
-          <div class="square-4"></div>
-          <div class="square-5"></div>
-          <div class="square-6"></div>
-          <div class="square-7"></div>
-          <div class="square-8"></div>
-          <div class="square-9"></div>
-        </div>
+      <div class="logo-effect" id="logoeffectparallax">
+        <div class="square-1"></div>
+        <div class="square-2"></div>
+        <div class="square-3"></div>
+        <div class="square-4"></div>
+        <div class="square-5"></div>
+        <div class="square-6"></div>
+        <div class="square-7"></div>
+        <div class="square-8"></div>
+        <div class="square-9"></div>
+      </div>
       <!--</div>-->
     </div>
     <div class="scrolltip" id="scrolltip"></div>
@@ -105,6 +107,27 @@
     <div class="iframe-container">
       <iframe width="560" height="315" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen id="ytplayer"></iframe>
       <a id="lightboxclose"><i class="fas fa-times"></i>Close</a>
+    </div>
+  </div>
+  <div class="instruction" id="instruction">
+    <a id="instructionclose"><i class="fas fa-times"></i>Close</a>
+    <div class="text">
+      <div class="title">Note</div>
+      <div class="description">
+        This demo is in the early development stage and is only for showcasing the core mechanic.
+        Multiple features and UI elements are absent.
+        Recommended to run on a desktop environment and play with 3 players.
+      </div>
+      <div class="title">Controls</div>
+      <div class="image contain"></div>
+      <div class="description">
+        *Up to 3 Xbox controllers are also supported.
+      </div>
+      <div class="action">
+        <a href="testlevel/" target="_blank">
+          <i class="fas fa-external-link-alt"></i>Play
+        </a>
+      </div>
     </div>
   </div>
   <div id="projects">
@@ -432,8 +455,8 @@
             They are going to dive into the world of money, sex and drugs, looking to reach their goal.
           </div>
           <div class="action">
-            <a href="testlevel/" target="_blank">
-              <i class="fas fa-external-link-alt"></i>Try Demo
+            <a id="instructionopenp4">
+              <i class="fas fa-desktop"></i>Try Demo
             </a>
           </div>
           <div class="details-toggle">
@@ -537,4 +560,5 @@
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
