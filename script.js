@@ -39,13 +39,13 @@ $(document).ready(function() {
 
 $(window).scroll(function() {
   if ($(this).scrollTop() > (0.1 * viewportHeight)) {
-    $("#topnavscroll").addClass("fold-top");
+    $("#topnav").addClass("fold-top");
     if (!$("#about").hasClass("reveal-right")) {
       $("#scrolltip").css("opacity", 0);
       $("#sidenavabout").css("transform", "translateX(20vw) rotate(90deg)");
     }
   } else {
-    $("#topnavscroll").removeClass("fold-top");
+    $("#topnav").removeClass("fold-top");
     if (!$("#about").hasClass("reveal-right")) {
       $("#scrolltip").css("opacity", 1);
       $("#sidenavabout").css("transform", "translateX(0) rotate(90deg)");
@@ -111,8 +111,8 @@ $(window).mousemove(function() {
 
 $("#topnavabout, #sidenavabout").click(function() {
   var scrollbarWidth = window.innerWidth - $(document.body).prop("clientWidth");
-  $("#topnavscroll").css("left", -scrollbarWidth);
-  $("#topnavscroll a:first-child").css("padding-left", scrollbarWidth);
+  $("#topnav").css("left", -scrollbarWidth);
+  $("#topnav a:first-child").css("padding-left", scrollbarWidth);
   $("#sidenavabout").css({
     "left": (viewportWidth * 0.9),
     "transform": "translateX(20vw) rotate(90deg)"
@@ -126,7 +126,7 @@ $("#topnavabout, #sidenavabout").click(function() {
   $("#about").addClass("reveal-right");
   if ((window.matchMedia('(min-width: 1025px)').matches) && (window.matchMedia('(orientation: landscape)').matches)) {
     $("#logoparallax, #logoeffectparallax").css("left", -50 + "vw");
-    $("#topnavscroll").css("padding-left", 5 + "vw");
+    $("#topnav").css("padding-left", 5 + "vw");
     $("#home").css("padding-left", 5 + "vw");
   }
   $("#scrolltip").css("opacity", 0);
@@ -136,8 +136,8 @@ $("#topnavabout, #sidenavabout").click(function() {
 
 $("#aboutclose, #home, #projects").click(function() {
   if ($("#about").hasClass("reveal-right")) {
-    $("#topnavscroll").css("left", 0);
-    $("#topnavscroll a:first-child").css("padding-left", 0);
+    $("#topnav").css("left", 0);
+    $("#topnav a:first-child").css("padding-left", 0);
     $("#sidenavabout").css({
       "left": 90 + "%",
       "transform": "translateX(0) rotate(90deg)"
@@ -151,7 +151,7 @@ $("#aboutclose, #home, #projects").click(function() {
     $("#about").removeClass("reveal-right");
     if ((window.matchMedia('(min-width: 1025px)').matches) && (window.matchMedia('(orientation: landscape)').matches)) {
       $("#logoparallax, #logoeffectparallax").css("left", 0);
-      $("#topnavscroll").css("padding-left", 10 + "vw");
+      $("#topnav").css("padding-left", 10 + "vw");
       $("#home").css("padding-left", 10 + "vw");
     }
     $("#scrolltip").css("opacity", 1);
@@ -164,26 +164,26 @@ $(window).resize(function() {
     $("#topnavabout, #sidenavabout").click();
     if ((window.matchMedia('(min-width: 1025px)').matches) && (window.matchMedia('(orientation: landscape)').matches)) {
       $("#logoparallax, #logoeffectparallax").css("left", -50 + "vw");
-      $("#topnavscroll").css("padding-left", 5 + "vw");
+      $("#topnav").css("padding-left", 5 + "vw");
       $("#home").css("padding-left", 5 + "vw");
     } else if ((window.matchMedia('(max-width: 600px)').matches)) {
       $("#logoparallax, #logoeffectparallax").css("left", 0);
-      $("#topnavscroll").css("padding-left", 5 + "vw");
+      $("#topnav").css("padding-left", 5 + "vw");
       $("#home").css("padding-left", 5 + "vw");
     } else {
       $("#logoparallax, #logoeffectparallax").css("left", 0);
-      $("#topnavscroll").css("padding-left", 10 + "vw");
+      $("#topnav").css("padding-left", 10 + "vw");
       $("#home").css("padding-left", 10 + "vw");
     }
   } else {
     $("#aboutclose, #home, #projects").click();
     if ((window.matchMedia('(min-width: 601px)').matches)) {
       $("#logoparallax, #logoeffectparallax").css("left", 0);
-      $("#topnavscroll").css("padding-left", 10 + "vw");
+      $("#topnav").css("padding-left", 10 + "vw");
       $("#home").css("padding-left", 10 + "vw");
     } else {
       $("#logoparallax, #logoeffectparallax").css("left", 0);
-      $("#topnavscroll").css("padding-left", 5 + "vw");
+      $("#topnav").css("padding-left", 5 + "vw");
       $("#home").css("padding-left", 5 + "vw");
     }
   }
@@ -261,8 +261,8 @@ $(window).scroll(function() {
 
 $("#lightboxopenp1").click(function() {
   var scrollbarWidth = window.innerWidth - $(document.body).prop("clientWidth");
-  $("#topnavscroll").css("left", -scrollbarWidth);
-  $("#topnavscroll a:first-child").css("padding-left", scrollbarWidth);
+  $("#topnav").css("left", -scrollbarWidth);
+  $("#topnav a:first-child").css("padding-left", scrollbarWidth);
   $(document.body).css({
     "position": "relative",
     "overflow-y": "hidden",
@@ -274,8 +274,8 @@ $("#lightboxopenp1").click(function() {
 });
 
 $("#lightboxclose, #lightbox").click(function() {
-  $("#topnavscroll").css("left", 0);
-  $("#topnavscroll a:first-child").css("padding-left", 0);
+  $("#topnav").css("left", 0);
+  $("#topnav a:first-child").css("padding-left", 0);
   $(document.body).css({
     "position": "static",
     "overflow-y": "scroll",
@@ -382,8 +382,8 @@ $(window).scroll(function() {
 
 $("#lightboxopenp3").click(function() {
   var scrollbarWidth = window.innerWidth - $(document.body).prop("clientWidth");
-  $("#topnavscroll").css("left", -scrollbarWidth);
-  $("#topnavscroll a:first-child").css("padding-left", scrollbarWidth);
+  $("#topnav").css("left", -scrollbarWidth);
+  $("#topnav a:first-child").css("padding-left", scrollbarWidth);
   $(document.body).css({
     "position": "relative",
     "overflow-y": "hidden",
@@ -395,8 +395,8 @@ $("#lightboxopenp3").click(function() {
 });
 
 $("#lightboxclose, #lightbox").click(function() {
-  $("#topnavscroll").css("left", 0);
-  $("#topnavscroll a:first-child").css("padding-left", 0);
+  $("#topnav").css("left", 0);
+  $("#topnav a:first-child").css("padding-left", 0);
   $(document.body).css({
     "position": "static",
     "overflow-y": "scroll",
@@ -444,8 +444,8 @@ $(window).scroll(function() {
 
 $("#instructionopenp4").click(function() {
   var scrollbarWidth = window.innerWidth - $(document.body).prop("clientWidth");
-  $("#topnavscroll").css("left", -scrollbarWidth);
-  $("#topnavscroll a:first-child").css("padding-left", scrollbarWidth);
+  $("#topnav").css("left", -scrollbarWidth);
+  $("#topnav a:first-child").css("padding-left", scrollbarWidth);
   $(document.body).css({
     "position": "relative",
     "overflow-y": "hidden",
@@ -465,8 +465,8 @@ $("#instruction div").click(function() {
 });
 
 $("#instructionclose, #instruction").click(function() {
-  $("#topnavscroll").css("left", 0);
-  $("#topnavscroll a:first-child").css("padding-left", 0);
+  $("#topnav").css("left", 0);
+  $("#topnav a:first-child").css("padding-left", 0);
   $(document.body).css({
     "position": "static",
     "overflow-y": "scroll",
