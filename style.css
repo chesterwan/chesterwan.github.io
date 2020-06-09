@@ -376,6 +376,16 @@ a:link, a:hover, a:active, a:visited {
   margin-bottom: 48px;
 }
 
+.about img {
+  width: 20%;
+  height: auto;
+  position: absolute;
+  bottom: 5vw;
+  right: 5vw;
+  -webkit-clip-path: circle(50% at center);
+  clip-path: circle(50% at center);
+}
+
 .lightbox {
   display: none;
   z-index: 100;
