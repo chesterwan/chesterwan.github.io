@@ -266,9 +266,10 @@ $("#lightboxopenp1").click(function() {
     "overflow-y": "hidden",
     "margin-right": scrollbarWidth
   });
-  $("#ytplayer").attr('src', "https://www.youtube.com/embed/7I4KskvREoA?autoplay=1&rel=0&enablejsapi=1&version=3");
+  //$("#ytplayer").attr('src', "https://www.youtube.com/embed/7I4KskvREoA?autoplay=1&rel=0&enablejsapi=1&version=3");
+  $("#player").attr('src', "https://player.vimeo.com/video/435056275?autoplay=1&autopause=0");
   $("#lightbox").addClass("reveal-front");
-  $("#ytplayer")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+  //$("#ytplayer")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
 });
 
 $("#lightboxclose, #lightbox").click(function() {
@@ -280,7 +281,8 @@ $("#lightboxclose, #lightbox").click(function() {
     "margin-right": 0
   });
   $("#lightbox").removeClass("reveal-front");
-  $("#ytplayer")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+  //$("#ytplayer")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+  $("#player").attr('src', "");
 });
 
 //project-1 details
@@ -387,9 +389,10 @@ $("#lightboxopenp3").click(function() {
     "overflow-y": "hidden",
     "margin-right": scrollbarWidth
   });
-  $("#ytplayer").attr('src', "https://www.youtube.com/embed/uqYdJWJJkkY?autoplay=1&rel=0&enablejsapi=1&version=3");
+  //$("#ytplayer").attr('src', "https://www.youtube.com/embed/uqYdJWJJkkY?autoplay=1&rel=0&enablejsapi=1&version=3");
+  $("#player").attr('src', "https://player.vimeo.com/video/435053481?autoplay=1&autopause=0");
   $("#lightbox").addClass("reveal-front");
-  $("#ytplayer")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+  //$("#ytplayer")[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
 });
 
 $("#lightboxclose, #lightbox").click(function() {
@@ -401,7 +404,8 @@ $("#lightboxclose, #lightbox").click(function() {
     "margin-right": 0
   });
   $("#lightbox").removeClass("reveal-front");
-  $("#ytplayer")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+  //$("#ytplayer")[0].contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+  $("#player").attr('src', "");
 });
 
 //project-3 details
