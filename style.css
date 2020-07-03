@@ -1191,13 +1191,15 @@ a:link, a:hover, a:active, a:visited {
   .logo-effect {
     width: 20vh;
     height: 20vh;
-    bottom: 50vh;
+    top: -40vh;
+    bottom: 0;
   }
 
   .logo {
     width: 20vh;
     height: 20vh;
-    bottom: 50vh;
+    top: -40vh;
+    bottom: 0;
   }
 
   .logo [class*="group-"] {
