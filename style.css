@@ -1177,7 +1177,6 @@ a:link, a:hover, a:active, a:visited {
 
   .landing {
     padding: 20vh 5vw 5vh 5vw;
-    height: 50vh;
   }
 
   .name {
@@ -1191,14 +1190,14 @@ a:link, a:hover, a:active, a:visited {
   .logo-effect {
     width: 20vh;
     height: 20vh;
-    top: -40vh;
+    top: -35%;
     bottom: 0;
   }
 
   .logo {
     width: 20vh;
     height: 20vh;
-    top: -40vh;
+    top: -35%;
     bottom: 0;
   }
 
