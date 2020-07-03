@@ -68,14 +68,12 @@ $("a").click(function() {
 
 //landing logo parallax scrolling
 
-$(window).scroll(function() {
+$(window).on("scroll resize", function() {
   if ($(this).scrollTop() < (0.5 * viewportHeight)) {
     var parallaxRatio = (0 - ($(window).scrollTop() / 5) + 'vh');
     var parallaxFade = 1 - ($(window).scrollTop() / 100);
     //$("#logoparallax").css("bottom", parallaxRatio);
-    if ($(window).width() > 1024 && $(window).width() >= $(window).height()) {
-      $("#logoparallax, #logoeffectparallax").css("transform", "translateY(" + parallaxRatio + ")");
-    }
+    //$("#logoparallax, #logoeffectparallax").css("transform", "translateY(" + parallaxRatio + ")");
     $("#logoparallax, #logoeffectparallax").css("opacity", parallaxFade);
   } else {
     $("#logoparallax, #logoeffectparallax").css("opacity", 0);

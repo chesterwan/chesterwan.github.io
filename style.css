@@ -1176,7 +1176,8 @@ a:link, a:hover, a:active, a:visited {
   }
 
   .landing {
-    padding: 32vh 5vw 5vh 5vw;
+    padding: 20vh 5vw 5vh 5vw;
+    height: 50vh;
   }
 
   .name {
@@ -1188,18 +1189,20 @@ a:link, a:hover, a:active, a:visited {
   }
 
   .logo-effect {
-    width: 30vh;
-    height: 30vh;
+    width: 20vh;
+    height: 20vh;
+    bottom: 50vh;
   }
 
   .logo {
-    width: 30vh;
-    height: 30vh;
+    width: 20vh;
+    height: 20vh;
+    bottom: 50vh;
   }
 
   .logo [class*="group-"] {
-    width: 30vh;
-    height: 30vh;
+    width: 20vh;
+    height: 20vh;
   }
 
   .about {
@@ -1268,6 +1271,8 @@ a:link, a:hover, a:active, a:visited {
   [class*="project-"] {
     width: 100%;
     margin-bottom: 5vh;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
   }
 
   #contact {
