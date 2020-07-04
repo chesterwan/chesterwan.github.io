@@ -469,7 +469,7 @@ a:link, a:hover, a:active, a:visited {
 .instruction #instructionclose {
   position: absolute;
   z-index: 101;
-  top: 0;
+  bottom: 0;
   right: calc(20vw - 8px);
   font-weight: 700;
   font-size: 1.125em;

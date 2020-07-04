@@ -454,11 +454,11 @@ $("#instructionopenp4").click(function() {
     "margin-right": scrollbarWidth
   });
   $("#instruction").addClass("reveal-front");
-  var topOffset = (window.innerHeight - $("#instruction .text").height()) / 2;
+  var topOffset = $("#instruction .text").position().top + $("#instruction .text").outerHeight();
   if (window.matchMedia('(orientation: landscape)').matches) {
-    $("#instructionclose").css("top", topOffset - 12);
+    $("#instructionclose").css("bottom", topOffset - $("#instructionclose").width() + $("#instructionclose i").width() + 8);
   } else {
-    $("#instructionclose").css("top", topOffset - 80);
+    $("#instructionclose").css("bottom", topOffset + 16);
   }
 });
 
