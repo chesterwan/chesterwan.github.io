@@ -454,7 +454,7 @@ $("#instructionopenp4").click(function() {
     "margin-right": scrollbarWidth
   });
   $("#instruction").addClass("reveal-front");
-  var topOffset = (viewportHeight - $("#instruction .text").height()) / 2;
+  var topOffset = (window.innerHeight - $("#instruction .text").height()) / 2;
   if (window.matchMedia('(orientation: landscape)').matches) {
     $("#instructionclose").css("top", topOffset - 12);
   } else {
