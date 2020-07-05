@@ -140,6 +140,19 @@ a:link, a:hover, a:active, a:visited {
   transition: transform 1s cubic-bezier(0.7, 0, 0.3, 1) 0s;
 }
 
+.scrolltipbackdrop {
+  display: none;
+  position: fixed;
+  bottom: calc(5vh - 0.8em);
+  left: 50%;
+  transform: translate(-50%);
+  width: 2.4em;
+  height: 2.4em;
+  background-color: #212121;
+  -webkit-transition: opacity 0.3s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+  transition: opacity 0.3s cubic-bezier(0.7, 0, 0.3, 1) 0s;
+}
+
 .scrolltip {
   position: fixed;
   bottom: 10vh;
@@ -1190,20 +1203,41 @@ a:link, a:hover, a:active, a:visited {
   .logo-effect {
     width: 20vh;
     height: 20vh;
-    top: -35%;
-    bottom: 0;
+    top: 0;
+    bottom: 35vh;
   }
 
   .logo {
     width: 20vh;
     height: 20vh;
-    top: -35%;
-    bottom: 0;
+    top: 0;
+    bottom: 35vh;
   }
 
   .logo [class*="group-"] {
     width: 20vh;
     height: 20vh;
+  }
+
+  .fold-top {
+    background-color: #fff;
+  }
+
+  .fold-top a {
+    color: #212121;
+  }
+
+  .fold-top .icon {
+    color: #212121;
+  }
+
+  .scrolltipbackdrop {
+    display: block;
+    z-index: 19;
+  }
+
+  .scrolltip {
+    z-index: 20;
   }
 
   .about {

@@ -41,13 +41,13 @@ $(window).scroll(function() {
   if ($(this).scrollTop() > (0.1 * viewportHeight)) {
     $("#topnav").addClass("fold-top");
     if (!$("#about").hasClass("reveal-right")) {
-      $("#scrolltip").css("opacity", 0);
+      $("#scrolltip, #scrolltipbackdrop").css("opacity", 0);
       $("#sidenavabout").css("transform", "translateX(20vw) rotate(90deg)");
     }
   } else {
     $("#topnav").removeClass("fold-top");
     if (!$("#about").hasClass("reveal-right")) {
-      $("#scrolltip").css("opacity", 1);
+      $("#scrolltip, #scrolltipbackdrop").css("opacity", 1);
       $("#sidenavabout").css("transform", "translateX(0) rotate(90deg)");
     }
   }
@@ -70,7 +70,7 @@ $("a").click(function() {
 
 $(window).on("scroll resize", function() {
   if ($(this).scrollTop() < (0.5 * viewportHeight)) {
-    var parallaxRatio = (0 - ($(window).scrollTop() / 5) + 'vh');
+    //var parallaxRatio = (0 - ($(window).scrollTop() / 5) + 'vh');
     var parallaxFade = 1 - ($(window).scrollTop() / 100);
     //$("#logoparallax").css("bottom", parallaxRatio);
     //$("#logoparallax, #logoeffectparallax").css("transform", "translateY(" + parallaxRatio + ")");
@@ -115,7 +115,7 @@ $("#topnavabout, #sidenavabout").click(function() {
     "left": (viewportWidth * 0.9),
     "transform": "translateX(20vw) rotate(90deg)"
   });
-  $("#scrolltip").css("left", (viewportWidth * 0.5))
+  $("#scrolltip, #scrolltipbackdrop").css("left", (viewportWidth * 0.5))
   $("#logoparallax, #logoeffectparallax").css("right", scrollbarWidth);
   $(document.body).css({
     "position": "relative",
@@ -127,7 +127,7 @@ $("#topnavabout, #sidenavabout").click(function() {
     $("#topnav").css("padding-left", 5 + "vw");
     $("#home").css("padding-left", 5 + "vw");
   }
-  $("#scrolltip").css("opacity", 0);
+  $("#scrolltip, #scrolltipbackdrop").css("opacity", 0);
   var actionDistance = (viewportWidth * 0.05) + $("#about").width() - $("#about > div").width();
   $("#about > div").css("left", actionDistance + "px");
 });
@@ -140,7 +140,7 @@ $("#aboutclose, #home, #projects").click(function() {
       "left": 90 + "%",
       "transform": "translateX(0) rotate(90deg)"
     });
-    $("#scrolltip").css("left", 50 + "%");
+    $("#scrolltip, #scrolltipbackdrop").css("left", 50 + "%");
     $("#logoparallax, #logoeffectparallax").css("right", 0);
     $(document.body).css({
       "position": "static",
@@ -152,7 +152,9 @@ $("#aboutclose, #home, #projects").click(function() {
       $("#topnav").css("padding-left", 10 + "vw");
       $("#home").css("padding-left", 10 + "vw");
     }
-    $("#scrolltip").css("opacity", 1);
+    if ($(window).scrollTop() <= (0.1 * viewportHeight)) {
+      $("#scrolltip, #scrolltipbackdrop").css("opacity", 1);
+    }
     $("#about > div").css("left", 5 + "vw");
   }
 });
