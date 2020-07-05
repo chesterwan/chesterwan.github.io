@@ -1219,16 +1219,32 @@ a:link, a:hover, a:active, a:visited {
     height: 20vh;
   }
 
-  .fold-top {
-    background-color: #fff;
+  @media (prefers-color-scheme: light) {
+    .fold-top {
+      background-color: #fff;
+    }
+
+    .fold-top a {
+      color: #212121;
+    }
+
+    .fold-top .icon {
+      color: #212121;
+    }
   }
 
-  .fold-top a {
-    color: #212121;
-  }
+  @media (prefers-color-scheme: dark) {
+    .fold-top {
+      background-color: #212121;
+    }
 
-  .fold-top .icon {
-    color: #212121;
+    .fold-top a {
+      color: #fff;
+    }
+
+    .fold-top .icon {
+      color: #fff;
+    }
   }
 
   .scrolltipbackdrop {
