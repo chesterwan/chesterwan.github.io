@@ -1233,7 +1233,7 @@ a:link, a:hover, a:active, a:visited {
     }
   }
 
-  @media (prefers-color-scheme: dark) {
+  @media (prefers-color-scheme: dark), (prefers-color-scheme: no-preference) {
     .fold-top {
       background-color: #212121;
     }
