@@ -1219,6 +1219,25 @@ a:link, a:hover, a:active, a:visited {
     height: 20vh;
   }
 
+  @media (min-aspect-ratio: 2/3) {
+    .logo-effect {
+      width: 40vw;
+      height: 40vw;
+      bottom: 20vh;
+    }
+
+    .logo {
+      width: 40vw;
+      height: 40vw;
+      bottom: 20vh;
+    }
+
+    .logo [class*="group-"] {
+      width: 40vw;
+      height: 40vw;
+    }
+  }
+
   @media (prefers-color-scheme: light) {
     .fold-top {
       background-color: #fff;
