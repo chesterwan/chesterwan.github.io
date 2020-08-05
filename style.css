@@ -769,6 +769,27 @@ a:link, a:hover, a:active, a:visited {
   padding: 48px 72px 96px 96px;
 }
 
+.details .video {
+  margin: 48px 192px;
+}
+
+.details .video .iframe-container {
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding-top: 56.25%;
+}
+
+.details .video .iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 [class*="project-"]:nth-child(odd) .intro .image {
   left: 0;
 }
@@ -856,23 +877,23 @@ a:link, a:hover, a:active, a:visited {
   filter: grayscale(90%);
 }
 
-.project-1 .details .row-9 .image {
+.project-1 .details .row-10 .image {
   background-image: url("img/refles-userjourney.png");
 }
 
-.project-1 .details .row-10 .image {
+.project-1 .details .row-11 .image {
   background-image: url("img/refles-assemble.png");
 }
 
-.project-1 .details .row-11 .image {
+.project-1 .details .row-12 .image {
   background-image: url("img/refles-evolution.png");
 }
 
-.project-1 .details .row-12 .image {
+.project-1 .details .row-13 .image {
   background-image: url("img/refles-buildings.png");
 }
 
-.project-1 .details .row-13 .image {
+.project-1 .details .row-14 .image {
   background-image: url("img/refles-essence.png");
   background-position: center 10%;
 }
@@ -988,6 +1009,10 @@ a:link, a:hover, a:active, a:visited {
 
   .image.full {
     padding: 0 48px !important;
+  }
+
+  .details .video {
+    margin: 48px;
   }
 
   .details .text {
@@ -1175,7 +1200,11 @@ a:link, a:hover, a:active, a:visited {
   }
 
   .image.full {
-    padding: 0 24px 48px 24px !important;
+    padding: 48px 24px !important;
+  }
+
+  .details .video {
+    margin: 0;
   }
 
   .details .text {

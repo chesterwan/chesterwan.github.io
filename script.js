@@ -311,15 +311,21 @@ $("#p1detailstoggle").click(function() {
   }
 });
 
+$(window).resize(function() {
+  if ($("#p1details").height() > 0) {
+    $("#p1details").css("max-height", $("#p1details").prop("scrollHeight") + "px");
+  }
+});
+
 //project-1 alternative image
 
 $(document).ready(function() {
   if (($("#p1r4image").width()) < $("#p1r4image").height() * 1.5) {
     $("#p1r4image").css("background-image", "url(img/refles-csv-alt.png)");
   }
-  if (($("#p1r9image").width()) < $("#p1r9image").height() * 2) {
-    $("#p1r9image").css("background-image", "url(img/refles-userjourney-alt.png)");
-    //$("#p1r9image").attr("style", "height: 60vh !important; background-image: url(img/refles-userjourney-alt.png)");
+  if (($("#p1r10image").width()) < $("#p1r10image").height() * 2) {
+    $("#p1r10image").css("background-image", "url(img/refles-userjourney-alt.png)");
+    //$("#p1r10image").attr("style", "height: 60vh !important; background-image: url(img/refles-userjourney-alt.png)");
   }
 });
 
@@ -329,10 +335,10 @@ $(window).resize(function() {
   } else {
     $("#p1r4image").css("background-image", "url(img/refles-csv.png)");
   }
-  if (($("#p1r9image").width()) < $("#p1r9image").height() * 2) {
-    $("#p1r9image").css("background-image", "url(img/refles-userjourney-alt.png)");
+  if (($("#p1r10image").width()) < $("#p1r10image").height() * 2) {
+    $("#p1r10image").css("background-image", "url(img/refles-userjourney-alt.png)");
   } else {
-    $("#p1r9image").css("background-image", "url(img/refles-userjourney.png)");
+    $("#p1r10image").css("background-image", "url(img/refles-userjourney.png)");
   }
 });
 
@@ -367,6 +373,12 @@ $("#p2detailstoggle").click(function() {
       "-webkit-filter": "brightness(0.8)",
       "filter": "brightness(0.8)"
     });
+  }
+});
+
+$(window).resize(function() {
+  if ($("#p2details").height() > 0) {
+    $("#p2details").css("max-height", $("#p2details").prop("scrollHeight") + "px");
   }
 });
 
@@ -431,6 +443,12 @@ $("#p3detailstoggle").click(function() {
       "-webkit-filter": "brightness(0.8)",
       "filter": "brightness(0.8)"
     });
+  }
+});
+
+$(window).resize(function() {
+  if ($("#p3details").height() > 0) {
+    $("#p3details").css("max-height", $("#p3details").prop("scrollHeight") + "px");
   }
 });
 
@@ -509,6 +527,12 @@ $("#p4detailstoggle").click(function() {
       "-webkit-filter": "brightness(0.8)",
       "filter": "brightness(0.8)"
     });
+  }
+});
+
+$(window).resize(function() {
+  if ($("#p4details").height() > 0) {
+    $("#p4details").css("max-height", $("#p4details").prop("scrollHeight") + "px");
   }
 });
 
