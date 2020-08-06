@@ -770,6 +770,7 @@ a:link, a:hover, a:active, a:visited {
 }
 
 .details .video {
+  width: 100%;
   margin: 48px 192px;
 }
 
