@@ -191,7 +191,7 @@ $(window).resize(function() {
 
 //projects image cover animation
 
-$(window).on("scroll resize", function() {
+$(window).on("scroll resize load", function() {
   //if ((viewportWidth > 768) && (viewportWidth > viewportHeight)) {}
   if ((window.matchMedia('(min-width: 1025px)').matches) && (window.matchMedia('(orientation: landscape)').matches)) {
     if ($(this).scrollTop() > ($("#p1sliding").offset().top - (viewportHeight / 2.5))) {

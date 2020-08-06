@@ -771,7 +771,7 @@ a:link, a:hover, a:active, a:visited {
 
 .details .video {
   width: 100%;
-  margin: 48px 192px;
+  padding: 48px 192px;
 }
 
 .details .video .iframe-container {
@@ -1013,7 +1013,7 @@ a:link, a:hover, a:active, a:visited {
   }
 
   .details .video {
-    margin: 48px;
+    padding: 48px;
   }
 
   .details .text {
@@ -1205,7 +1205,7 @@ a:link, a:hover, a:active, a:visited {
   }
 
   .details .video {
-    margin: 0;
+    padding: 0;
   }
 
   .details .text {
