@@ -1281,14 +1281,14 @@ a:link, a:hover, a:active, a:visited {
     width: 20vh;
     height: 20vh;
     top: 0;
-    bottom: calc(100vh - 100vw);
+    bottom: calc(95vh - 100vw);
   }
 
   .logo {
     width: 20vh;
     height: 20vh;
     top: 0;
-    bottom: calc(100vh - 100vw);
+    bottom: calc(95vh - 100vw);
   }
 
   .logo [class*="group-"] {
