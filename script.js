@@ -84,7 +84,7 @@ $(window).on("scroll resize", function() {
 
 $(window).on("scroll resize load", function() {
   if (window.matchMedia('(max-width: 600px)').matches) {
-    $("#logoparallax, #logoeffectparallax").css("top", window.outerHeight - window.innerHeight);
+    $("#logoparallax, #logoeffectparallax").css("top", window.screen.availHeight - window.innerHeight);
   } else {
     $("#logoparallax, #logoeffectparallax").css("top", 0);
   }
