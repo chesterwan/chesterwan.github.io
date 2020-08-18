@@ -80,6 +80,14 @@ $(window).on("scroll resize", function() {
   }
 });
 
+//landing logo centering
+
+$(window).on("scroll resize load", function() {
+  if (window.matchMedia('(max-width: 600px)').matches) {
+    $("#logoparallax, #logoeffectparallax").css("top", viewportHeight - window.innerHeight);
+  }
+});
+
 //langing logo mouse animation
 /*
 $(window).mousemove(function() {
