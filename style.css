@@ -649,7 +649,7 @@ a:link, a:hover, a:active, a:visited {
 .paragraphbreak {
   display: block;
   width: 100%;
-  height: 0.75em;
+  height: 24px;
 }
 
 .action {
@@ -912,6 +912,38 @@ a:link, a:hover, a:active, a:visited {
 .project-2 .details .row-3 .image {
   background-image: url("img/journeytothebees-platform.png");
   background-position: center top;
+}
+
+.project-2 .details .row-4 .image {
+  background-image: url("img/journeytothebees-test.png");
+}
+
+.project-2 .details .row-5 .image {
+  background-image: url("img/journeytothebees-leveldesign.png");
+}
+
+.project-2 .details .row-6 .image {
+  background-image: url("img/journeytothebees-visuals.png");
+}
+
+.project-2 .details .row-7 .image {
+  background-image: url("img/journeytothebees-level1.png");
+  background-position: 10% center;
+}
+
+.project-2 .details .row-8 .image {
+  background-image: url("img/journeytothebees-level2.png");
+  background-position: 10% center;
+}
+
+.project-2 .details .row-9 .image {
+  background-image: url("img/journeytothebees-level3.png");
+  background-position: 10% center;
+}
+
+.project-2 .details .row-10 .image {
+  background-image: url("img/journeytothebees-level4.png");
+  background-position: 10% center;
 }
 
 .project-3 .details .row-1 .image {
@@ -1211,7 +1243,7 @@ a:link, a:hover, a:active, a:visited {
   .details .text {
     width: 100%;
     margin-top: 20vh;
-    padding: 24px 18px 48px 24px;
+    padding: 36px 18px 48px 24px;
   }
 
   .details .title {
@@ -1231,29 +1263,32 @@ a:link, a:hover, a:active, a:visited {
   }
 
   .landing {
+    height: 100vw;
     padding: 20vh 5vw 5vh 5vw;
   }
 
   .name {
     font-size: 3em;
+    line-height: 1;
   }
 
   .caption {
     font-size: 1.125em;
+    line-height: 1.4;
   }
 
   .logo-effect {
     width: 20vh;
     height: 20vh;
     top: 0;
-    bottom: 35vh;
+    bottom: calc(100vh - 100vw);
   }
 
   .logo {
     width: 20vh;
     height: 20vh;
     top: 0;
-    bottom: 35vh;
+    bottom: calc(100vh - 100vw);
   }
 
   .logo [class*="group-"] {
@@ -1265,13 +1300,11 @@ a:link, a:hover, a:active, a:visited {
     .logo-effect {
       width: 40vw;
       height: 40vw;
-      bottom: 20vh;
     }
 
     .logo {
       width: 40vw;
       height: 40vw;
-      bottom: 20vh;
     }
 
     .logo [class*="group-"] {
@@ -1372,12 +1405,8 @@ a:link, a:hover, a:active, a:visited {
     margin-bottom: 0;
   }
 
-  .paragraphbreak {
-    height: 1em;
-  }
-
   #projects {
-    padding: 5vw 0 0 0;
+    padding: 0;
   }
 
   [class*="project-"] {

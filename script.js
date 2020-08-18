@@ -249,7 +249,7 @@ $(window).on("scroll resize load", function() {
 
 //project-1 sliding
 
-$(window).scroll(function() {
+$(window).on("scroll resize load", function() {
   if ($(this).scrollTop() > (0.1 * viewportHeight)) {
     $("#p1sliding").addClass("reveal-top");
   } else {
@@ -344,7 +344,7 @@ $(window).resize(function() {
 
 //project-2 sliding
 
-$(window).scroll(function() {
+$(window).on("scroll resize load", function() {
   if ($(this).scrollTop() > (0.1 * viewportHeight)) {
     $("#p2sliding").addClass("reveal-top");
   } else {
@@ -382,9 +382,25 @@ $(window).resize(function() {
   }
 });
 
+//project-2 alternative image
+
+$(document).ready(function() {
+  if (($("#p2r5image").width()) > $("#p2r5image").height() * 1.5) {
+    $("#p2r5image").css("background-image", "url(img/journeytothebees-leveldesign-alt.png)");
+  }
+});
+
+$(window).resize(function() {
+  if (($("#p2r5image").width()) > $("#p2r5image").height() * 1.5) {
+    $("#p2r5image").css("background-image", "url(img/journeytothebees-leveldesign-alt.png)");
+  } else {
+    $("#p2r5image").css("background-image", "url(img/journeytothebees-leveldesign.png)");
+  }
+});
+
 //project-3 sliding
 
-$(window).scroll(function() {
+$(window).on("scroll resize load", function() {
   if ($(this).scrollTop() > (0.1 * viewportHeight)) {
     $("#p3sliding").addClass("reveal-top");
   } else {
@@ -454,7 +470,7 @@ $(window).resize(function() {
 
 //project-4 sliding
 
-$(window).scroll(function() {
+$(window).on("scroll resize load", function() {
   if ($(this).scrollTop() > (0.1 * viewportHeight)) {
     $("#p4sliding").addClass("reveal-top");
   } else {
@@ -538,7 +554,7 @@ $(window).resize(function() {
 
 //project-5 sliding
 
-$(window).scroll(function() {
+$(window).on("scroll resize load", function() {
   if ($(this).scrollTop() > (0.1 * viewportHeight)) {
     $("#p5sliding").addClass("reveal-top");
   } else {
@@ -548,7 +564,7 @@ $(window).scroll(function() {
 
 //project-6 sliding
 
-$(window).scroll(function() {
+$(window).on("scroll resize load", function() {
   if ($(this).scrollTop() > (0.1 * viewportHeight)) {
     $("#p6sliding").addClass("reveal-top");
   } else {
