@@ -1,3 +1,7 @@
+html {
+  height: -webkit-fill-available;
+}
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
@@ -6,7 +10,8 @@ body {
   overflow-y: scroll;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  min-height: 600px;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 * {
@@ -1281,14 +1286,14 @@ a:link, a:hover, a:active, a:visited {
     width: 20vh;
     height: 20vh;
     top: 0;
-    bottom: calc(95vh - 100vw);
+    bottom: calc(100vh - 100vw);
   }
 
   .logo {
     width: 20vh;
     height: 20vh;
     top: 0;
-    bottom: calc(95vh - 100vw);
+    bottom: calc(100vh - 100vw);
   }
 
   .logo [class*="group-"] {
