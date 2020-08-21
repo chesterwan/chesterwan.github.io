@@ -80,7 +80,7 @@ $(window).on("scroll resize", function() {
   }
 });
 
-//landing logo centering
+//landing logo vertical centering
 
 $(window).on("scroll resize load", function() {
   if (window.matchMedia('(max-width: 600px)').matches) {
